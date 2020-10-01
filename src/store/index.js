@@ -7,8 +7,16 @@ export default new Vuex.Store({
   state: {
     registeredStudents: []
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    addStudent: (state, student) => {
+      state.registeredStudents.push(student);
+    }
+  },
+  actions: {
+    addStudent: ({commit}, student) => {
+      commit("addStudent", student);
+    }
+  },
   getters: {
     registeredStudents: state => state.registeredStudents
   }

@@ -27,6 +27,16 @@ export default {
   },
   data: () => ({
     registeredStudents: []
-  })
+  }),
+  computed: {
+    studentsList(){
+      return this.$store.getters.registeredStudents;
+    }
+  },
+  watch: {
+    studentsList(value){
+      this.registeredStudents = value;
+    }
+  }
 };
 </script>
