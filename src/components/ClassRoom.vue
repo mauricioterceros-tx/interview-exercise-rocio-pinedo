@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <v-card-title v-if="true" class="pa-0">
+    <v-card-title v-if="registrationState" class="pa-0">
       <span>Registration in progress</span>
     </v-card-title>
     <v-card-title v-else class="pa-0">
@@ -19,7 +19,12 @@
 <script>
 export default {
   name: "ClassRoom",
-
+  props:{
+    registrationState: {
+      value: Boolean,
+      default: false
+    }  
+  },
   data: () => ({
     registeredStudents: []
   })
