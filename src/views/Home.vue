@@ -1,10 +1,10 @@
 <template>
   <v-card flat>
-    <v-card-title>Register Students</v-card-title>
+    <v-card-title>InternShip Students Registation</v-card-title>
     <v-card-text>
       <v-container fluid>
         <v-row>
-          <v-switch label="Registration is closed" />
+          <v-switch label="Close Registration" />
         </v-row>
         <v-row class="d-flex align-center">
           <v-text-field class="pr-2" label="Student Name" />

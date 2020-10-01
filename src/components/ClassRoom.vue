@@ -1,7 +1,11 @@
 <template>
   <v-card flat>
-    <v-card-title v-if="true" class="pa-0">Actual Students</v-card-title>
-    <v-card-title v-else class="pa-0">List of Registered Student</v-card-title>
+    <v-card-title v-if="true" class="pa-0">
+      <span>Registration in progress</span>
+    </v-card-title>
+    <v-card-title v-else class="pa-0">
+      <span>Registration was closed</span>
+    </v-card-title>
     <v-card-text>
       <v-list>
         <v-list-item :key="student.name" v-for="student in registeredStudents">
