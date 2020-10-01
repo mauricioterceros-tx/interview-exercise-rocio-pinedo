@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-card flat>
+    <v-card-title>Register Students</v-card-title>
+    <v-card-text>
+      <v-container fluid>
+        <v-row>
+          <v-switch label="Registration is closed" />
+        </v-row>
+        <v-row class="d-flex align-center">
+          <v-text-field class="pr-2" label="Student Name" />
+          <v-btn color="primary">Register</v-btn>
+        </v-row>
+        <v-row>
+          <ClassRoom />
+        </v-row>
+      </v-container>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import ClassRoom from "@/components/ClassRoom";
 
 export default {
   name: "Home",
+
   components: {
-    HelloWorld
+    ClassRoom
   }
 };
 </script>

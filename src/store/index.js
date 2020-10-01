@@ -4,8 +4,12 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    registeredStudents: []
+  },
   mutations: {},
   actions: {},
-  modules: {}
+  getters: {
+    registeredStudents: state => state.registeredStudents
+  }
 });
